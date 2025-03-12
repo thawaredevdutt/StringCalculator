@@ -10,6 +10,10 @@ RSpec.describe Calculator do
       it 'returns the number itself for a single number' do
         expect(Calculator.add("1")).to eq(1)
       end
+
+      it 'returns the sum of numbers for comma-separated numbers' do
+        expect(Calculator.add("1,5")).to eq(6)
+      end
     end
   end
 end
