@@ -18,6 +18,10 @@ RSpec.describe Calculator do
       it 'handles new lines between numbers' do
         expect(Calculator.add("1\n2,3")).to eq(6)
       end
+
+      it 'supports custom delimiters' do
+        expect(Calculator.add("//;\n1;2")).to eq(3)
+      end
     end
   end
 end
